@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.get('/', (req, res) => {
-    res.render('demo');
+    res.render('demo', {title: 'abc'});
 });
 
 app.get('/tinhtong/:a/:b', (req, res) => {

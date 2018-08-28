@@ -6,8 +6,12 @@ app.listen(3000);
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+// config EJS
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 app.get('/', (req, res) => {
-    res.send('<h1>hahha</h1>');
+    res.render('demo');
 });
 
 app.get('/tinhtong/:a/:b', (req, res) => {
